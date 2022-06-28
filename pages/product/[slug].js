@@ -3,7 +3,9 @@ import {client,urlFor } from '../../lib/Client';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import {Product} from '../../components';
 import { useStateContext } from '../../context/StateContext';
+import Link from 'next/link';
 
+import getStripe from '../../lib/getStripe';
 const ProductDetails = ({product,products}) => {
     const { image, name, details, price ,author,language,publisher,pages,isbn,binding,dimension ,originalprice} = product;
 
@@ -20,6 +22,7 @@ const ProductDetails = ({product,products}) => {
     // const s=parseInt(discountPri,10);
 
     // console.log(discountPri)
+    
 
   return (
     <div >
@@ -73,12 +76,19 @@ const ProductDetails = ({product,products}) => {
             </p>
           </div>
           <div className="buttons">
-          <button type="button" className="buy-now" onClick="">Buy Now</button><br></br>
-          <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
-          
+          <button type="button" className="buy-now" onClick={() => onAdd(product, qty)}>Buy Now</button><br></br>
+          <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button><br></br>
+         
+<Link href='https://archive.org/embed/peril_of_doc_ock' target="_blank">
+         <button type="button" className="add-to-cart" target="iframe_a" onClick="">Read e-book</button></Link>
+        
+         {/* <iframe src="https://archive.org/embed/peril_of_doc_ock" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> */}
           </div>
           
+          
         </div>
+        <iframe loading='eager' height="500" width="400" frameborder="0" src="http://kindleweb.s3.amazonaws.com/app/1.0.11.053.093655/KindleReaderApp.html?asin=B000JQUT8S&assoctag=labnol-20">
+</iframe>
         {/* <div className='right-desc'>
                    <center> <span className='title'>About the Book</span></center>
                    <div className='details'>Details:
@@ -86,6 +96,7 @@ const ProductDetails = ({product,products}) => {
                    </div>
             </div>  */}
       </div>
+      
     
     <div className='highlights-container'>
       <h4>Book Highlights:  </h4>

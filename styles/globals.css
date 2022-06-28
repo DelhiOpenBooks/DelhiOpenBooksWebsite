@@ -213,27 +213,38 @@ text-align: end;
   font-weight: 200;
 }
 .footer-banner-container{
-  padding: 53px 51px;
-  background-color: rgb(53, 50, 50);
+
+  padding: 51px 24px;
+  /* background-color: #f02d34; */
+  background: linear-gradient(to right,#00093c,#7d1f00);
   border-radius: 15px;
+  border-top-left-radius: 125px;
   position: relative;
-  height: 300px;
-  line-height: 1; 
+  height: 377px;
+  line-height: 1;
   color: white;
   width: 100%;
-  margin-top: 120px;
-}
-.banner-desc{
-  display: flex ;
-
-  /* justify-content: space-evenly; */
-  gap: 300px;
-}
+  margin-top: 90px;
+  
+  }
+  .banner-desc{
+  /* display: flex ; /
+  / flex-wrap: wrap;
+  width: 10px; /
+  / height: 250px; */
+  justify-content: space-evenly;
+  gap: 30px;
+  width: 100%;
+  
+  /* position: absolute;
+  bottom: 0; */
+  
+  }
 .banner-desc p{
    color: rgb(255, 255, 255);
 }
 
-.banner-desc button{
+/* .banner-desc button{
   border-radius: 15px;
   padding: 10px 16px;
   background-color: white;
@@ -243,7 +254,7 @@ text-align: end;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-}
+} */
 .banner-desc .left{
   /* border: 2px solid black; */
   width: 40%;
@@ -694,9 +705,139 @@ margin-top: 160px;
   
   opacity: 0.7;
 }
+.ftr-row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  }
+  .ftr-col{
+  flex-basis: 25%;
+  padding: 10px;
+  
+  }
+  .ftr-col:nth-child(2), .ftr-col:nth-child(3){
+  flex-basis: 15%;
+  }
+  .ftr-logo{
+  width: 80px;
+  margin-bottom: 30px;
+  color: white;
+  
+  }
+  .ftr-col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+  }
+  .ftr-email{
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+  }
+  ul li{
+  list-style: none;
+  margin-bottom: 12px;
+  
+  }
+  ul li:hover{
+  width: auto;
+  /* border-bottom: 1px solid white; */
+  color: grey;
+  }
+  form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom:1px solid #ccc ;
+  margin-bottom: 50px;
+  }
+  form .envelope{
+  font-size: 25px;
+  margin-right: 10px;
+  
+  }
+  form input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  }
+  form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  color: ;
+  }
+  form button .but{
+  font-size: 20px;
+  color: white;
+  }
+  .social-icons .icon-design{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  color: #000;
+  background-color: white;
+  margin-right: 35px;
+  cursor: pointer;
+  }
+  hr{
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+  }
+  .domain{
+  text-align: center;
+  }
+  .underline{
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+  }
+  .underline span{
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  top: 0;
+  position: absolute;
+  left: 10px;
+  animation: moving 2s linear infinite;
+  }
+  @Keyframes moving{
+  0%{
+  left: -20px;
+  }x=
+  100%{
+  left: 100px;
+  }
+  }
+  
 
 
 @media screen and (max-width:800px) {
+  .ftr-col{
+    flex-basis: 100%;
+    
+    }
+    .ftr-col:nth-child(2), .ftr-col:nth-child(3){
+      flex-basis: 100%;
+    }
   .highlights-details2{
     /* border: 2px solid black; */
     margin-top: 20px;
