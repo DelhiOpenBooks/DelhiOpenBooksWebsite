@@ -27,10 +27,13 @@ width: 100%;
 }
 
 .navbar-container{
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 18px;
   position: relative;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  margin: 6px 18px;
+  width:97vw;
+
+
 }
 .marquee-text{
   font-size: 29px;
@@ -65,18 +68,21 @@ width: 100%;
     margin-left: 6px;
 }
 .logo{
-  color: gray;
-  font-size: 18px;
+  /* right: 100%; */
+  color: rgb(112, 43, 43);
+  font-size: 20px;
 
 }
 .cart-icon{
   font-size: 25px;
   color: gray;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   transition: transform .4s ease;
   border: none;
   background-color: transparent;
+  top: 0;
+  right: 13px;
 }
 .cart-icon:hover{
   transform: scale(1.1,1.1);
@@ -122,10 +128,13 @@ width: 100%;
 
 .product-name{
   font-weight: 500;
+    font-size: 13px;
+    padding-left: 13px;
 }
 .product-price{
   font-weight: 800;
   margin-top: 6px;
+  padding-inline-start: 15px;
   color: black;
 }
 
@@ -822,13 +831,23 @@ margin-top: 160px;
   @Keyframes moving{
   0%{
   left: -20px;
-  }x=
+  }
   100%{
   left: 100px;
   }
   }
   
-
+  /* //..........dropdonwn navbar/ */
+  .dropdown-categores{
+    font-size: 19px;
+    margin: 18px 45px;
+    color: sienna;
+    /* border: 2px solid black; */
+  }
+  .dropdown-categores:hover{
+    color: #000;
+    cursor:pointer;
+  }
 
 @media screen and (max-width:800px) {
   .ftr-col{
@@ -868,7 +887,7 @@ margin-top: 160px;
     right: -3%;
   }
   .footer-banner-container{
-    height: 560px;
+    height: 1000px;
     margin-top: 80px;
   }
   .footer-banner-image{

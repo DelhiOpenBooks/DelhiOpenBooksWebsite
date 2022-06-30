@@ -5,5 +5,5 @@ export { default as Product } from './Product';
 export { default as Banner } from './Banner';
 export { default as FooterBanner } from './FooterBanner';
 export { default as Cart } from './Cart';
-
+export { default as ProductCategories } from './ProductCategories';
 

@@ -11,7 +11,7 @@ const ProductDetails = ({product,products}) => {
 
     const [index,setIndex]=useState(0);
     const { decQty, incQty, qty,onAdd} = useStateContext();
-
+    
 
     let discountedPrice={price};
     let OriginalPrice={originalprice}
@@ -19,9 +19,7 @@ const ProductDetails = ({product,products}) => {
       return ((OriginalPrice-discountedPrice)/OriginalPrice)*100;
     }
     const discountPri=discount(OriginalPrice,discountedPrice);
-    // const s=parseInt(discountPri,10);
-
-    // console.log(discountPri)
+   
     
 
   return (
@@ -64,7 +62,7 @@ const ProductDetails = ({product,products}) => {
                     <p>{details}</p> */}
                     <span><b>Author: </b>{author}</span><br></br>
                     <p className='price'> &#x20B9; {price} </p> 
-                    <span className='discount'> &nbsp; <del> &#x20B9;398 </del></span>
+                    <span className='discount'> &nbsp; <del> &#x20B9;{originalprice} </del></span>
                     {/* <span> &nbsp; {discountPri}</span>s */}
                     
                     <div className="quantity">
@@ -78,17 +76,14 @@ const ProductDetails = ({product,products}) => {
           <div className="buttons">
           <button type="button" className="buy-now" onClick={() => onAdd(product, qty)}>Buy Now</button><br></br>
           <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button><br></br>
-         
-<Link href='https://archive.org/embed/peril_of_doc_ock' target="_blank">
-         <button type="button" className="add-to-cart" target="iframe_a" onClick="">Read e-book</button></Link>
+
         
          {/* <iframe src="https://archive.org/embed/peril_of_doc_ock" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> */}
           </div>
           
           
         </div>
-        <iframe loading='eager' height="500" width="400" frameborder="0" src="http://kindleweb.s3.amazonaws.com/app/1.0.11.053.093655/KindleReaderApp.html?asin=B000JQUT8S&assoctag=labnol-20">
-</iframe>
+
         {/* <div className='right-desc'>
                    <center> <span className='title'>About the Book</span></center>
                    <div className='details'>Details:

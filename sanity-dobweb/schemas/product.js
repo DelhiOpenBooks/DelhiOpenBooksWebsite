@@ -80,6 +80,12 @@ export default {
         name: 'dimension',
         title: 'Dimension',
         type: 'string',
+      },
+      
+      {
+        name: 'category',
+        title: 'Category',
+        type: 'string',
       }
       
     ]
