@@ -4,12 +4,13 @@ import { AiOutlineShopping } from 'react-icons/ai'
 
 import { Cart } from '.';
 import { useStateContext} from '../context/StateContext';
-import ProductCatagories from '.';
+import productCatagories from '.';
 import Product from '.';
 
 
 const Navbar = (product) => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
+
  
 
   return (
@@ -17,7 +18,9 @@ const Navbar = (product) => {
       <span className='logo'>
         <Link href="/">Delhi Open Books</Link>  
       </span>
-        <span className='dropdown-categores' ><Link href="/productCategories/fiction">Category</Link></span>
+        <span className='dropdown-categores' ><Link href='/newArrival'>New Arrivals</Link></span>
+        <span className='dropdown-categores' ><Link href='/books'>Book Categories</Link></span>
+
       
       
       
