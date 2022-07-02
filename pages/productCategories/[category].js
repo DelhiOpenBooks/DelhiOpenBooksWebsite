@@ -2,7 +2,7 @@ import React from 'react'
 import { Router, useRouter } from 'next/router'
 import {client,urlFor } from '../../lib/Client';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
-import {Product, ProductCategories} from '../../Components';
+
 import Link from 'next/link';
 import { useStateContext } from '../../context/StateContext';
 import { useState } from 'react';
